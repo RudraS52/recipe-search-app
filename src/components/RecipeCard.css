@@ -1,0 +1,40 @@
+/* src/components/RecipeCard.css */
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h2 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.recipe-card p {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.recipe-card a {
+  display: block;
+  margin: 10px;
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.recipe-card a:hover {
+  text-decoration: underline;
+}
