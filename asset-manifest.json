@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/recipe-search-app/static/css/main.c1048b01.css",
-    "main.js": "/recipe-search-app/static/js/main.06e69a74.js",
+    "main.css": "/recipe-search-app/static/css/main.dd41738c.css",
+    "main.js": "/recipe-search-app/static/js/main.b8c1dba2.js",
     "static/js/453.5e023c9b.chunk.js": "/recipe-search-app/static/js/453.5e023c9b.chunk.js",
+    "static/media/poppins-devanagari-400-normal.woff": "/recipe-search-app/static/media/poppins-devanagari-400-normal.421fe9869ff4b58e2d7b.woff",
+    "static/media/poppins-devanagari-400-normal.woff2": "/recipe-search-app/static/media/poppins-devanagari-400-normal.d2ee5e6ea17bffe3bf58.woff2",
+    "static/media/poppins-latin-400-normal.woff": "/recipe-search-app/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/recipe-search-app/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/recipe-search-app/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/recipe-search-app/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
     "index.html": "/recipe-search-app/index.html",
-    "main.c1048b01.css.map": "/recipe-search-app/static/css/main.c1048b01.css.map",
-    "main.06e69a74.js.map": "/recipe-search-app/static/js/main.06e69a74.js.map",
+    "main.dd41738c.css.map": "/recipe-search-app/static/css/main.dd41738c.css.map",
+    "main.b8c1dba2.js.map": "/recipe-search-app/static/js/main.b8c1dba2.js.map",
     "453.5e023c9b.chunk.js.map": "/recipe-search-app/static/js/453.5e023c9b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1048b01.css",
-    "static/js/main.06e69a74.js"
+    "static/css/main.dd41738c.css",
+    "static/js/main.b8c1dba2.js"
   ]
 }
