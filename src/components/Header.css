@@ -1,0 +1,22 @@
+.app-header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 40px;
+
+  /* 👉 Sticky header properties */
+  position: sticky;  /* Makes it stick to the top when scrolling */
+  top: 0;            /* Sticks to the top of the viewport */
+  z-index: 1000;     /* Ensures it stays above other content */
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.app-header p {
+  margin-top: 8px;
+  font-size: 18px;
+}
