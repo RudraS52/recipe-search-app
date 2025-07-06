@@ -1,4 +1,3 @@
-// SearchBar.js
 import React from 'react';
 
 const SearchBar = ({ search, setSearch, handleSearch }) => {
@@ -15,4 +14,4 @@ const SearchBar = ({ search, setSearch, handleSearch }) => {
   );
 };
 
-export default SearchBar;
+export default SearchBar; 
