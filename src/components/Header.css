@@ -1,22 +1,76 @@
+
+/* Main header — compact version */
 .app-header {
   text-align: center;
-  padding: 30px 20px;
-  background-color: #4CAF50;
-  color: white;
-  margin-bottom: 40px;
-
-  /* 👉 Sticky header properties */
-  position: sticky;  /* Makes it stick to the top when scrolling */
-  top: 0;            /* Sticks to the top of the viewport */
-  z-index: 1000;     /* Ensures it stays above other content */
+  padding: 16px 20px 18px;
+  background: linear-gradient(135deg, #173f35 0%, #28664b 100%);
+  color: #ffffff;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 14px rgba(23, 63, 53, 0.14);
 }
 
-.app-header h1 {
+/* Brand row */
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Food icon */
+.header-icon {
+  font-size: 27px;
+  line-height: 1;
+}
+
+/* Main title */
+.header-brand h1 {
   margin: 0;
-  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  color: #ffffff;
 }
 
-.app-header p {
-  margin-top: 8px;
-  font-size: 18px;
+/* Supporting tagline */
+.header-tagline {
+  max-width: 560px;
+  margin: 6px auto 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e1eee5;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .app-header {
+    padding: 13px 16px 15px;
+    margin-bottom: 18px;
+  }
+
+  .header-brand {
+    gap: 8px;
+  }
+
+  .header-icon {
+    font-size: 25px;
+  }
+
+  .header-brand h1 {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  .header-tagline {
+    max-width: 360px;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
