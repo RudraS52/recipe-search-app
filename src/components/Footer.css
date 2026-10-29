@@ -1,18 +1,33 @@
 
+/* Premium food editorial — footer */
+
 .app-footer {
   text-align: center;
-  padding: 15px;
-  background-color: #f1f1f1;
-  color: #333;
+  padding: 22px 20px;
+  background-color: var(--color-cream, #F8F3E9);
+  color: var(--color-muted, #777064);
+  border-top: 1px solid var(--color-border, #E8E0D4);
 
-  /* Keep the footer in normal document flow.
-     It appears after the main content instead of covering it. */
+  /* Keep the footer in normal document flow */
   position: static;
   width: 100%;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .app-footer p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 600px) {
+  .app-footer {
+    padding: 18px 14px;
+  }
+
+  .app-footer p {
+    font-size: 12px;
+  }
 }

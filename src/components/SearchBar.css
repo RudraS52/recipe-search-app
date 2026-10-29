@@ -3,7 +3,8 @@
 .search-bar {
   position: relative;
   width: min(680px, calc(100% - 32px));
-  margin: 0 auto 36px;
+  margin: 0 auto 20px;
+  padding-top: 16px;
   z-index: 20;
 }
 

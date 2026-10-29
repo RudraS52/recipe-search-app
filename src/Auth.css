@@ -1,0 +1,165 @@
+
+/* =========================================
+   Recipe Search App — Authentication Pages
+   ========================================= */
+
+
+.auth-container {
+  width: min(100% - 32px, 440px);
+  margin: 20px auto 28px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: var(--color-surface, #FFFFFF);
+  color: var(--color-espresso, #29251F);
+
+  border: 1px solid var(--color-border, #E8E0D4);
+  border-radius: var(--radius-lg, 24px);
+  box-shadow: var(--shadow-card, 0 8px 24px rgba(41, 37, 31, 0.07));
+
+  text-align: left;
+}
+
+
+.auth-container h2 {
+  margin: 0 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: var(--color-espresso, #29251F);
+  
+}
+
+.auth-container > p {
+  margin: 0 0 24px;
+  color: var(--color-muted, #777064);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.auth-container form > div {
+  margin-bottom: 18px;
+}
+
+.auth-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-espresso, #29251F);
+}
+
+.auth-container input {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-border, #E8E0D4);
+  border-radius: var(--radius-sm, 10px);
+  background: #FFFEFC;
+  color: var(--color-espresso, #29251F);
+
+  font: inherit;
+  font-size: 14px;
+
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.auth-container input::placeholder {
+  color: #A39B8F;
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: var(--color-tomato, #D94A38);
+  box-shadow: 0 0 0 3px rgba(217, 74, 56, 0.12);
+}
+
+.auth-container form button[type="submit"] {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 4px;
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: var(--radius-pill, 999px);
+  background: var(--color-tomato, #D94A38);
+  color: #FFFFFF;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.auth-container form button[type="submit"]:hover:not(:disabled) {
+  background: var(--color-tomato-dark, #B93628);
+  transform: translateY(-1px);
+}
+
+.auth-container button:focus-visible {
+  outline: 3px solid rgba(217, 74, 56, 0.35);
+  outline-offset: 3px;
+}
+
+.auth-container button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-container form p[role="alert"] {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+
+  border: 1px solid #FECDCA;
+  border-radius: var(--radius-sm, 10px);
+  background: #FEF3F2;
+  color: #B42318;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.auth-container form + p {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border, #E8E0D4);
+
+  color: var(--color-muted, #777064);
+  text-align: center;
+  font-size: 13px;
+}
+
+.auth-container form + p button {
+  display: inline;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-tomato, #D94A38);
+
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-container form + p button:hover {
+  color: var(--color-tomato-dark, #B93628);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+     margin: 16px auto 24px;
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .auth-container h2 {
+   font-size: 27px;
+  }
+}
