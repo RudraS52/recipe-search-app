@@ -1,74 +1,496 @@
-/* src/App.css */
-.App {
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+
+/* ==========================================
+   RECIPE APP — MODERN FOOD EDITORIAL THEME
+   File: src/App.css
+   ========================================== */
+
+/* 1. Global design tokens */
+:root {
+  --color-cream: #F8F3E9;
+  --color-surface: #FFFFFF;
+  --color-tomato: #D94A38;
+  --color-tomato-dark: #B93628;
+  --color-espresso: #29251F;
+  --color-muted: #777064;
+  --color-border: #E8E0D4;
+  --color-success: #26734D;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 8px 24px rgba(41, 37, 31, 0.07);
+  --shadow-hover: 0 16px 36px rgba(41, 37, 31, 0.12);
+
+  --page-width: 1240px;
+  --page-gutter: 24px;
+  --transition-smooth: 220ms ease;
 }
 
-h1 {
-  margin-top: 20px;
-  font-size: 36px;
-  color: #333;
+/* 2. Consistent box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-/* App.css */
+
+/* 3. Global page styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: "Poppins", Arial, sans-serif;
+  letter-spacing: normal;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+button,
+input {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(217, 74, 56, 0.3);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 4. Main application */
+
+.App {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--color-espresso);
+}
+
+
+/* Avoid changing every heading site-wide.
+   Individual sections can define their own typography. */
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-espresso);
+  line-height: 1.2;
+}
+
+/* 5. Homepage hero */
 .hero-section {
-  margin-top: 30px;
-  padding: 20px;
+  width: min(
+    calc(100% - 2 * var(--page-gutter)),
+    var(--page-width)
+  );
+  margin: 32px auto 24px;
+  padding: clamp(24px, 5vw, 64px) 20px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  text-align: center;
 }
 
 .hero-section h1 {
-  font-size: 3rem;
-  color: #4caf50;
+  max-width: 900px;
+  margin: 0 auto 18px;
+  color: var(--color-espresso);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
 }
 
 .hero-section p {
-  font-size: 1.2rem;
-  color: #555;
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.8;
 }
 
+/* 6. Introductory tagline */
+.tagline {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* 7. Shared buttons
+   Existing buttons keep their current dimensions unless
+   they opt into one of these classes. */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid var(--color-tomato);
+  border-radius: var(--radius-pill);
+  background: var(--color-tomato);
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background var(--transition-smooth),
+    transform var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  background: var(--color-tomato-dark);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-espresso);
+  font-weight: 600;
+  transition:
+    border-color var(--transition-smooth),
+    background var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-tomato);
+  background: #FFF9F5;
+}
+
+/* 8. Shared inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  max-width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-espresso);
+  transition:
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--color-tomato);
+  box-shadow: 0 0 0 3px rgba(217, 74, 56, 0.1);
+}
+
+/* 9. Loading and empty states */
+/* Empty state: less whitespace, better balance */
 .empty-state {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  justify-content: center;
+  width: min(calc(100% - 32px), 560px);
+  margin: 8px auto 20px;
+  padding: 24px 24px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow-card);
 }
 
 .empty-state p {
-  font-size: 1.1rem;
-  color: #888;
+  max-width: 440px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 .empty-image {
-  width: 250px;
-  margin-bottom: 20px;
-}
-.tagline {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #555;
+  display: block;
+  width: min(210px, 65%);
+  max-height: 210px;
+  margin: 0 auto 12px;
+  object-fit: contain;
 }
 
-/* Soft, warm background for the recipe discovery experience */
-body {
-  margin: 0;
-  background-color: #faf9f5;
-  color: #26352d;
-  font-family: 'Calibri', sans-serif;
-  letter-spacing: 0.5px;
-}
-/* Shared layout for loading and validation/error messages. */
+/* 10. Status and error messages */
 .status-message {
+  width: min(calc(100% - 32px), 600px);
   margin: 24px auto;
-  padding: 12px 16px;
-  max-width: 600px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
   text-align: center;
   font-family: inherit;
 }
 
-/* Makes failures noticeable without overwhelming the page. */
 .error-message {
-  color: #b42318;
-  background-color: #fef3f2;
-  border: 1px solid #fecdca;
-  border-radius: 6px;
+  border: 1px solid #F1C3BC;
+  border-radius: var(--radius-sm);
+  background: #FFF0ED;
+  color: #A52D22;
+}
+
+/* 11. Responsive spacing */
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 14px;
+  }
+
+  .hero-section {
+    margin-top: 20px;
+    padding: 32px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .hero-section h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .tagline {
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+  }
+
+  .empty-state {
+    width: calc(100% - 28px);
+    margin-top: 4px;
+    padding: 20px 16px;
+  }
+   .empty-image {
+    width: min(190px, 70%);
+    max-height: 180px;
+  }
+}
+
+/* 12. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+/* Main app layout */
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+.app-main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+
+/* ==========================================
+   LOGIN / SIGNUP PAGE LAYOUT
+   File: src/App.css
+   ========================================== */
+
+/* Keep the authentication page at least as tall as the screen.
+   Flexbox allows the footer to stay near the bottom. */
+.App.auth-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-cream);
+}
+
+/* Keep the existing header centered and compact on auth pages.
+   This selector matches the wrapper used in App.js. */
+.App.auth-page > .auth-header-row {
+  width: 100%;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+/* Style authentication errors without affecting recipe errors. */
+.App.auth-page > [role="alert"] {
+  width: min(calc(100% - 32px), 520px);
+  margin: 12px auto;
+  padding: 12px 16px;
+  border: 1px solid #F1C3BC;
+  border-radius: var(--radius-sm);
+  background: #FFF0ED;
+  color: #A52D22;
+}
+
+/* Two-column layout:
+   login/signup form on the left and food photography on the right. */
+/* Reduce the overall height of the authentication layout. */
+.auth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+
+  width: min(calc(100% - 40px), 1100px);
+  margin: 12px auto 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Left panel holds the existing Login or Signup component.
+   The form component itself remains unchanged. */
+.auth-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 24px 30px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+/* Right panel provides the visual food experience.
+   The image is decorative, so no extra image element is required. */
+.auth-visual-panel {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+
+  padding: 28px;
+  border-radius: var(--radius-lg);
+
+  background-color: #51402F;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(25, 20, 14, 0.04) 15%,
+      rgba(25, 20, 14, 0.82) 100%
+    ),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85");
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-card);
+}
+
+/* Keep the welcome message above the background image. */
+.auth-visual-content {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+  text-align: left;
+}
+
+/* White text contrasts with the darker lower part of the photo. */
+.auth-visual-content h2 {
+  margin: 0 0 10px;
+  color: #FFFFFF;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.auth-visual-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+   font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Push the footer down when the page has enough height. */
+.App.auth-page > .app-footer {
+  margin-top: auto;
+}
+
+/* Tablet and mobile: stack the form and visual panel vertically. */
+@media (max-width: 760px) {
+   .auth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: min(calc(100% - 28px), 520px);
+    margin: 10px auto 16px;
+    flex: initial;
+  }
+  .auth-form-panel {
+    padding: 20px 18px;
+  }
+
+  .auth-visual-panel {
+      height: auto;
+    min-height: 220px;
+    padding: 22px;
+  }
+
+  .auth-visual-content h2 {
+    font-size: clamp(1.7rem, 6vw, 2.3rem);
+  }
+}
+
+/* Small phones: reduce spacing while preserving readability. */
+@media (max-width: 400px) {
+  .App.auth-page > .auth-header-row {
+    padding: 8px 10px;
+  }
+
+  .auth-form-panel {
+     padding: 16px 12px;
+  }
+
+  .auth-visual-panel {
+     min-height: 190px;
+    padding: 18px;
+  }
 }
