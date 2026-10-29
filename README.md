@@ -1,70 +1,168 @@
-# Getting Started with Create React App
+# 🍳 Recipe Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive recipe search application built with **React.js, JavaScript, and TheMealDB API** to help users discover recipes through a simple and intuitive interface.
 
-## Available Scripts
+The project demonstrates practical frontend development skills, including reusable React components, API integration, search functionality, autocomplete suggestions, and responsive UI design. Future enhancements will explore AI-powered recipe discovery through natural-language prompts.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🔍 **Recipe Search** — Search for recipes using recipe names or keywords.
+- 💡 **Autocomplete Suggestions** — Get search suggestions while typing.
+- 🥗 **Recipe Discovery** — Retrieve matching recipes using TheMealDB API.
+- 📱 **Responsive UI** — Designed for desktop and mobile screens.
+- 🧩 **Reusable Components** — Organized component-based architecture.
+- 🎨 **Custom Styling** — Styled using CSS and the Poppins font.
+- 🍽️ **Empty State** — Displays a cooking-themed illustration before searching.
+- 🧭 **Reusable Layout** — Header and footer components provide a consistent interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React.js
+- **Programming Language:** JavaScript (ES6+)
+- **Styling:** CSS3, Poppins
+- **API Integration:** TheMealDB API
+- **Package Manager:** npm
+- **Build Tool:** Create React App
+- **Deployment:** GitHub Pages
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+my-recipe-app/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Header.css
+│   │   ├── Footer.js
+│   │   ├── Footer.css
+│   │   ├── SearchBar.js
+│   │   ├── SearchBar.css
+│   │   ├── RecipeList.js
+│   │   ├── RecipeList.css
+│   │   ├── RecipeCard.js
+│   │   └── RecipeCard.css
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these instructions to run the application locally.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
+- Git (optional, for cloning the repository)
 
-### `npm run eject`
+### 1. Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/RudraS52/recipe-search-app.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Navigate to the project directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd recipe-search-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Start the development server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📡 API Integration
 
-### Analyzing the Bundle Size
+The application uses **TheMealDB API** to retrieve recipe information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **API Provider:** [TheMealDB](https://www.themealdb.com/api.php)
+- **Documentation:** [TheMealDB API Documentation](https://www.themealdb.com/api.php)
 
-### Making a Progressive Web App
+The API supplies recipe data that the application can use to display relevant search results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🏗️ Build for Production
 
-### Advanced Configuration
+Create an optimized production build by running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+The generated files will be available in the `build/` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🌐 Live Demo
 
-### `npm run build` fails to minify
+[**View Recipe Search App**](https://rudras52.github.io/recipe-search-app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔮 Upcoming Features
+
+The project roadmap includes AI-powered functionality to make recipe discovery more interactive and personalized.
+
+- 🤖 **AI-Powered Recipe Assistant** — Integrate an AI API to interpret cooking requests and assist users in finding suitable recipes.
+- 💬 **Prompt-Based Recipe Search** — Let users describe what they want in natural language instead of relying only on keywords.
+- 🥗 **Personalized Recipe Recommendations** — Recommend recipes based on available ingredients, dietary preferences, and user requirements.
+- 🧑‍🍳 **Step-by-Step Cooking Guidance** — Provide cooking instructions, preparation tips, and ingredient substitution suggestions.
+- 🥦 **Smart Ingredient Substitutions** — Suggest alternatives when specific ingredients are unavailable.
+- 🧠 **Context-Aware Conversations** — Support follow-up prompts that refine earlier suggestions.
+
+### 💡 Example AI Prompt
+
+> I have eggs, spinach, and cheese. Suggest three easy breakfast recipes that take less than 20 minutes to prepare.
+
+### Planned AI Integration
+
+The proposed AI functionality will explore:
+
+1. Integrating a suitable AI API.
+2. Building a prompt-based chat interface with React.
+3. Processing natural-language recipe requests.
+4. Connecting AI suggestions with recipe data where appropriate.
+5. Supporting conversational follow-up questions.
+6. Handling loading states, API errors, and empty responses.
+
+**Status:** Planned for a future release. AI functionality is not yet included in the current application.
+
+## 🎯 Learning Objectives
+
+This project demonstrates practical frontend development concepts:
+
+- Building reusable components with React.
+- Managing component state and user interactions.
+- Implementing search and autocomplete functionality.
+- Integrating a REST API.
+- Displaying dynamically retrieved data.
+- Creating responsive layouts using CSS.
+- Organizing a maintainable component-based application.
+- Preparing production builds and deploying with GitHub Pages.
+
+## 👨‍💻 Author
+
+**Rudra Singh**
+
+Frontend Developer | React.js | JavaScript | UI Development | ASP.NET MVC/.NET
+
+- **GitHub:** [RudraS52](https://github.com/RudraS52)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/web-developer-rp-singh/)
+- **Portfolio:** [Visit my portfolio](https://portfolio-jade-nine-36.vercel.app/)
+
+---
+
+⭐ If you find this project useful, explore the repository and share your feedback.
+
+*Built with React.js and a passion for creating practical, user-friendly web applications.*
